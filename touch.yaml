@@ -1,0 +1,10 @@
+---
+
+- hosts: windows
+  tasks:
+  - name: Install firefox
+    win_chocolatey:
+      name: firefox
+      version: '98.0.1'
+      source: https://www.mozilla.org/id/firefox/download/
+      state: present

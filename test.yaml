@@ -1,0 +1,21 @@
+- hosts: windows
+  gather_facts: true
+  tasks:
+  
+  - name: Install firefox
+    win_chocolatey:
+       name: firefox
+#       version: '98.0.1'
+       state: present
+#       become: yes
+#       source_username: dexip
+#       source_password: dexip;21
+#       become_method: runas
+#  - name: Search-only, return list of updates found (if any), log to c:\ansible_wu.txt
+#    win_updates:
+#      category_names:
+#       -SecurityUpdates
+#       -CriticalUpdates
+#       -UpdateRollups
+#      state: searched
+#      log_path: c:\ansible_wu.txt
